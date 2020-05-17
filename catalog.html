@@ -11,7 +11,7 @@
       <nav>
 
         <!-- Логотип по центру-->
-        <a>
+        <a href="index.html">
           <!-- здесь будет лого в формате SVG -->
         </a>
 
@@ -31,45 +31,84 @@
       <h1>Каталог гостиниц</h1>
 
       <!-- Блок фильтров с поиском жилья -->
-      <div>
-
-      </div>
+      <section>
+        <h2>Фильтры подбора жилья</h2>
+      </section>
 
       <!-- Блок со списком гостиинц-->
-      <div>
+      <section>
+        <h2>Предложения</h2>
+
+        <div>
+          <span>Найдено: 3</span>
+          <h3>Сортировка</h3>
+          <ul>
+            <li>
+              <button type="button">По цене</button>
+            </li>
+            <li>
+              <button type="button">По типу</button>
+            </li>
+            <li>
+              <button type="button">по рейтингу</button>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <button type="button"></button>
+            </li>
+            <li>
+              <button type="button"></button>
+            </li>
+          </ul>
+        </div>
+
         <ul>
           <li>
             <img src="#" width="135" height="90" alt="Amara Resort & Spa">
-            <h3>Amara Resort & Spa</h3>
-            <span>Гостиница</span>
-            <p>От 4000 Р.</p>
-            <a>Подробнее</a>
-            <a>Забронировать</a>
-            <span>Звезды</span>
-            <p>Рейтинг: 8,5</p>
+            <div>
+              <h3>Amara Resort & Spa</h3>
+              <span>Гостиница</span>
+              <span>От 4000 Р.</span>
+              <a>Подробнее</a>
+              <a>Забронировать</a>
+            </div>
+            <div>
+              <span>Звезды</span>
+              <p>Рейтинг: 8,5</p>
+            </div>
           </li>
           <li>
             <img src="#" width="135" height="90" alt="Desert Quail Inn">
-            <h3>Desert Quail Inn</h3>
-            <span>Мотель</span>
-            <p>От 3000 Р.</p>
-            <a>Подробнее</a>
-            <a>Забронировать</a>
-            <span>Звезды</span>
-            <p>Рейтинг: 8,9</p>
+            <div>
+              <h3>Desert Quail Inn</h3>
+              <span>Мотель</span>
+              <span>От 3000 Р.</span>
+              <a>Подробнее</a>
+              <a>Забронировать</a>
+            </div>
+            <div>
+              <span>Звезды</span>
+              <p>Рейтинг: 8,9</p>
+            </div>
           </li>
           <li>
             <img src="#" width="135" height="90" alt="Villas at Poco Diablo">
-            <h3>Villas at Poco Diablo</h3>
-            <span>Апартаменты</span>
-            <p>От 2000 Р.</p>
-            <a>Подробнее</a>
-            <a>Забронировать</a>
-            <span>Звезды</span>
-            <p>Рейтинг: 9,2</p>
+            <div>
+              <h3>Villas at Poco Diablo</h3>
+              <span>Апартаменты</span>
+              <span>От 2000 Р.</span>
+              <a>Подробнее</a>
+              <a>Забронировать</a>
+            </div>
+            <div>
+              <span>Звезды</span>
+              <p>Рейтинг: 9,2</p>
+            </div>
           </li>
         </ul>
-      </div>
+
+      </section>
     </main>
 
     <!-- Подвал сайта -->
@@ -77,20 +116,20 @@
 
       <!-- Блок с контактами-->
       <div>
-        <p>#visitSEDONA</p>
-        <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+        <span>#visitSEDONA</span>
+        <a href="tel:+74956660166" aria-label="Телефон компании">ТЕЛ: +7(495) 666-01-66</a>
       </div>
 
       <!-- Блок с социальными сетями-->
         <ul>
           <li>
-            <a href="#">Twitter</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
           </li>
           <li>
-            <a href="#">facebook</a>
+            <a href="#" aria-label="facebook">facebook</a>
           </li>
           <li>
-            <a href="#">youtube</a>
+            <a href="#" aria-label="youtube">youtube</a>
           </li>
         </ul>
 
@@ -99,7 +138,6 @@
         <p>Website by</p>
         <a><span>Лого</span></a>
       </div>
-
     </footer>
 
   </body>
