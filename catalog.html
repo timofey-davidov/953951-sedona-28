@@ -12,7 +12,7 @@
 
         <!-- Логотип по центру-->
         <a href="index.html">
-          <!-- здесь будет лого в формате SVG -->
+          <img src="img/header_logo.svg" width="138" height="70" alt="Логотип СЕДОНЫ">
         </a>
 
         <!-- Блок навигации -->
@@ -33,6 +33,7 @@
       <!-- Блок фильтров с поиском жилья -->
       <section>
         <h2>Фильтры подбора жилья</h2>
+        <!-- ВНИМАНИЕ! НЕ ЗАБЫТЬ! После разработки формы заменить стандартные чекбоксы формата ВКЛ и ВЫКЛ через CSS на нестандартные с помощью псевдоэлемента :After -->
       </section>
 
       <!-- Блок со списком гостиинц-->
@@ -55,17 +56,21 @@
           </ul>
           <ul>
             <li>
-              <button type="button"></button>
+              <button type="button">
+                <img src="img/icon-down-dir.svg" width="11" height="10" alt="Стрелка ВНИЗ">
+              </button>
             </li>
             <li>
-              <button type="button"></button>
+              <button type="button">
+                <img src="img/icon-up-dir.svg" width="11" height="10" alt="Стрелка ВВЕРХ">
+              </button>
             </li>
           </ul>
         </div>
 
         <ul>
           <li>
-            <img src="#" width="135" height="90" alt="Amara Resort & Spa">
+            <img src="img/main_amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
             <div>
               <h3>Amara Resort & Spa</h3>
               <span>Гостиница</span>
@@ -74,12 +79,17 @@
               <a>Забронировать</a>
             </div>
             <div>
-              <span>Звезды</span>
+              <div class="stars">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+              </div>
               <p>Рейтинг: 8,5</p>
             </div>
           </li>
           <li>
-            <img src="#" width="135" height="90" alt="Desert Quail Inn">
+            <img src="img/main_desert.jpg" width="135" height="90" alt="Desert Quail Inn">
             <div>
               <h3>Desert Quail Inn</h3>
               <span>Мотель</span>
@@ -88,12 +98,16 @@
               <a>Забронировать</a>
             </div>
             <div>
-              <span>Звезды</span>
+              <div class="stars">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+              </div>
               <p>Рейтинг: 8,9</p>
             </div>
           </li>
           <li>
-            <img src="#" width="135" height="90" alt="Villas at Poco Diablo">
+            <img src="img/main_villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             <div>
               <h3>Villas at Poco Diablo</h3>
               <span>Апартаменты</span>
@@ -102,7 +116,10 @@
               <a>Забронировать</a>
             </div>
             <div>
-              <span>Звезды</span>
+              <div class="stars">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
+              </div>
               <p>Рейтинг: 9,2</p>
             </div>
           </li>
@@ -122,6 +139,7 @@
 
       <!-- Блок с социальными сетями-->
         <ul>
+          <!-- ВНИМАНИЕ! НЕ ЗАБЫТЬ! Нужно поменять стандартные маркеры на иконки в CSS через свойство list-style-image -->
           <li>
             <a href="#" aria-label="Twitter">Twitter</a>
           </li>
@@ -136,7 +154,9 @@
       <!-- Блок РАЗРАБОТАНО-->
       <div>
         <p>Website by</p>
-        <a><span>Лого</span></a>
+        <a>
+          <img src="img/footer_htmlacademy.svg" width="115" height="41" alt="Лого Академии">
+        </a>
       </div>
     </footer>
 
