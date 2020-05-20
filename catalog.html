@@ -6,13 +6,42 @@
   </head>
   <body>
 
+    <!-- Блок СПРАЙТОВ -->
+    <svg display="none">
+      
+      <symbol id="twitter" viewBox="0 0 17 15">
+        <path d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
+      </symbol>
+
+      <symbol id="fb" viewBox="0 0 12 22">
+        <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
+      </symbol>
+
+      <symbol id="youtube" viewBox="0 0 20 16">
+        <path d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
+      </symbol>
+
+      <symbol id="star" viewBox="0 0 19 17">
+        <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"/>
+      </symbol>
+
+      <symbol id="down" viewBox="0 0 11 10">
+        <path d="M5.5 10L0 0h11"/>
+      </symbol>
+
+      <symbol id="up" viewBox="0 0 11 10">
+        <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+      </symbol>
+
+    </svg >
+    
     <!-- Меню навигации -->
     <header>
       <nav>
 
         <!-- Логотип по центру-->
         <a href="index.html">
-          <img src="img/header_logo.svg" width="138" height="70" alt="Логотип СЕДОНЫ">
+          <img src="img/header_logo.jpg" width="138" height="70" alt="Логотип СЕДОНЫ">
         </a>
 
         <!-- Блок навигации -->
@@ -57,12 +86,16 @@
           <ul>
             <li>
               <button type="button">
-                <img src="img/icon-down-dir.svg" width="11" height="10" alt="Стрелка ВНИЗ">
+                <svg width="11" height="10">
+                  <use xlink:href="#down"></use>
+                </svg>
               </button>
             </li>
             <li>
               <button type="button">
-                <img src="img/icon-up-dir.svg" width="11" height="10" alt="Стрелка ВВЕРХ">
+                <svg width="11" height="10">
+                  <use xlink:href="#up"></use>
+                </svg>
               </button>
             </li>
           </ul>
@@ -79,12 +112,28 @@
               <a>Забронировать</a>
             </div>
             <div>
-              <div class="stars">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-              </div>
+              <ul class="star-rating">
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+              </ul>
               <p>Рейтинг: 8,5</p>
             </div>
           </li>
@@ -98,11 +147,23 @@
               <a>Забронировать</a>
             </div>
             <div>
-              <div class="stars">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-              </div>
+              <ul class="star-rating">
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+              </ul>
               <p>Рейтинг: 8,9</p>
             </div>
           </li>
@@ -116,10 +177,18 @@
               <a>Забронировать</a>
             </div>
             <div>
-              <div class="stars">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-                <img src="img/main_star.svg" width="19" height="17" alt="Звезда">
-              </div>
+              <ul class="star-rating">
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg width="19" height="17">
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </li>
+              </ul>
               <p>Рейтинг: 9,2</p>
             </div>
           </li>
@@ -139,23 +208,43 @@
 
       <!-- Блок с социальными сетями-->
         <ul>
-          <!-- ВНИМАНИЕ! НЕ ЗАБЫТЬ! Нужно поменять стандартные маркеры на иконки в CSS через свойство list-style-image -->
           <li>
-            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Twitter">
+              <span>Twitter</span>
+
+              <svg width="17" height="15">
+                <use xlink:href="#twitter"></use>
+              </svg>
+
+            </a>
           </li>
           <li>
-            <a href="#" aria-label="facebook">facebook</a>
+            <a href="#" aria-label="facebook">
+              <span>facebook</span>
+
+              <svg width="12" height="22">
+                <use xlink:href="#fb"></use>
+              </svg>
+
+            </a>
           </li>
           <li>
-            <a href="#" aria-label="youtube">youtube</a>
+            <a href="#" aria-label="youtube">
+              <span>youtube</span>
+
+              <svg width="20" height="16">
+                <use xlink:href="#youtube"></use>
+              </svg>
+
+            </a>
           </li>
         </ul>
 
       <!-- Блок РАЗРАБОТАНО-->
       <div>
         <p>Website by</p>
-        <a>
-          <img src="img/footer_htmlacademy.svg" width="115" height="41" alt="Лого Академии">
+        <a href="https://htmlacademy.ru">
+          <img src="img/footer_htmlacademy.jpg" width="115" height="41" alt="Лого Академии">
         </a>
       </div>
     </footer>
