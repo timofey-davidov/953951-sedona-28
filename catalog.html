@@ -61,13 +61,76 @@
 
       <!-- Блок фильтров с поиском жилья -->
       <section>
-        <h2>Фильтры подбора жилья</h2>
-        <!-- ВНИМАНИЕ! НЕ ЗАБЫТЬ! После разработки формы заменить стандартные чекбоксы формата ВКЛ и ВЫКЛ через CSS на нестандартные с помощью псевдоэлемента :After -->
+        <h2 class="visually-hidden">Фильтры подбора жилья</h2>
+        <form action="https://echo.htmlacademy.ru" method="get">
+
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="filter_pool" checked>
+                <label for="filter_pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="filter_parking">
+                <label for="filter_parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wi-fi" id="filter_wi-fi">
+                <label for="filter_wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="filter_hotel" checked>
+                <label for="filter_hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="filter_motel" checked>
+                <label for="filter_motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartments" id="filter_apartments" checked>
+                <label for="filter_apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <!-- Блок с фильтром стоимости и ползунками -->
+          <div>
+
+            <fieldset>
+              <ul>
+                <li>
+                  <label>от<input type="text" name="price_min" placeholder="0"></label>
+                </li>
+                <li>
+                  <label>до<input type="text" name="price_max" placeholder="3000"></label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- DIV с двойным ползунком -->
+            <div>
+              <div class="main_scale"></div>
+              <div class="main_scale_between"></div>
+              <div class="main_slider"></div>
+              <div class="main_slider"></div>
+            </div>
+
+            <button type="submit">Показать</button>
+          </div>
+
+        </form>
       </section>
 
       <!-- Блок со списком гостиинц-->
       <section>
-        <h2>Предложения</h2>
+        <h2 class="visually-hidden">Предложения</h2>
 
         <div>
           <span>Найдено: 3</span>
@@ -85,14 +148,14 @@
           </ul>
           <ul>
             <li>
-              <button type="button">
+              <button type="button" aria-label="Стрелка вниз">
                 <svg width="11" height="10">
                   <use xlink:href="#down"></use>
                 </svg>
               </button>
             </li>
             <li>
-              <button type="button">
+              <button type="button" aria-label="Стрелка вверх">
                 <svg width="11" height="10">
                   <use xlink:href="#up"></use>
                 </svg>
@@ -210,7 +273,7 @@
         <ul>
           <li>
             <a href="#" aria-label="Twitter">
-              <span>Twitter</span>
+              <span class="visually-hidden">Twitter</span>
 
               <svg width="17" height="15">
                 <use xlink:href="#twitter"></use>
@@ -220,7 +283,7 @@
           </li>
           <li>
             <a href="#" aria-label="facebook">
-              <span>facebook</span>
+              <span class="visually-hidden">facebook</span>
 
               <svg width="12" height="22">
                 <use xlink:href="#fb"></use>
@@ -230,7 +293,7 @@
           </li>
           <li>
             <a href="#" aria-label="youtube">
-              <span>youtube</span>
+              <span class="visually-hidden">youtube</span>
 
               <svg width="20" height="16">
                 <use xlink:href="#youtube"></use>
