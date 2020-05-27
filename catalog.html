@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Седона — гостиницы</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -36,16 +38,16 @@
     </svg >
     
     <!-- Меню навигации -->
-    <header>
-      <nav>
+    <header class="main_header">
+      <nav class="main_navigation">
 
         <!-- Логотип по центру-->
-        <a href="index.html">
+        <a class="main_header_logo" href="index.html">
           <img src="img/header_logo.jpg" width="138" height="70" alt="Логотип СЕДОНЫ">
         </a>
 
         <!-- Блок навигации -->
-        <ul>
+        <ul class="site_navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -57,14 +59,14 @@
 
     <!--Основная часть сайта -->
     <main>
-      <h1>Каталог гостиниц</h1>
+      <h1 class="visually_hidden">Каталог гостиниц</h1>
 
       <!-- Блок фильтров с поиском жилья -->
-      <section>
-        <h2 class="visually-hidden">Фильтры подбора жилья</h2>
-        <form action="https://echo.htmlacademy.ru" method="get">
+      <section class="filters">
+        <h2 class="visually_hidden">Фильтры подбора жилья</h2>
+        <form class="house_filter" action="https://echo.htmlacademy.ru" method="get">
 
-          <fieldset>
+          <fieldset class="filter_item">
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
@@ -82,7 +84,7 @@
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter_item">
             <legend>Тип жилья:</legend>
             <ul>
               <li>
@@ -103,8 +105,8 @@
           <!-- Блок с фильтром стоимости и ползунками -->
           <div>
 
-            <fieldset>
-              <ul>
+            <fieldset class="filter_item">
+              <ul class="price">
                 <li>
                   <label>от<input type="text" name="price_min" placeholder="0"></label>
                 </li>
@@ -130,44 +132,34 @@
 
       <!-- Блок со списком гостиинц-->
       <section>
-        <h2 class="visually-hidden">Предложения</h2>
+        <h2 class="visually_hidden">Предложения</h2>
 
-        <div>
+        <div class="filter_of_house">
           <span>Найдено: 3</span>
-          <h3>Сортировка</h3>
-          <ul>
-            <li>
+          <h3>Сортировка:</h3>
+          <div class="filters_house">
               <button type="button">По цене</button>
-            </li>
-            <li>
               <button type="button">По типу</button>
-            </li>
-            <li>
               <button type="button">по рейтингу</button>
-            </li>
-          </ul>
-          <ul>
-            <li>
+          </div>
+          <div class="arrows">
               <button type="button" aria-label="Стрелка вниз">
                 <svg width="11" height="10">
                   <use xlink:href="#down"></use>
                 </svg>
               </button>
-            </li>
-            <li>
               <button type="button" aria-label="Стрелка вверх">
                 <svg width="11" height="10">
                   <use xlink:href="#up"></use>
                 </svg>
               </button>
-            </li>
-          </ul>
+          </div>
         </div>
 
-        <ul>
+        <ul class="hotels">
           <li>
             <img src="img/main_amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <div>
+            <div class="hotel_item">
               <h3>Amara Resort & Spa</h3>
               <span>Гостиница</span>
               <span>От 4000 Р.</span>
@@ -202,7 +194,7 @@
           </li>
           <li>
             <img src="img/main_desert.jpg" width="135" height="90" alt="Desert Quail Inn">
-            <div>
+            <div class="hotel_item">
               <h3>Desert Quail Inn</h3>
               <span>Мотель</span>
               <span>От 3000 Р.</span>
@@ -232,7 +224,7 @@
           </li>
           <li>
             <img src="img/main_villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-            <div>
+            <div class="hotel_item">
               <h3>Villas at Poco Diablo</h3>
               <span>Апартаменты</span>
               <span>От 2000 Р.</span>
@@ -264,16 +256,16 @@
     <footer>
 
       <!-- Блок с контактами-->
-      <div>
+      <div class="footer_contacts">
         <span>#visitSEDONA</span>
         <a href="tel:+74956660166" aria-label="Телефон компании">ТЕЛ: +7(495) 666-01-66</a>
       </div>
 
       <!-- Блок с социальными сетями-->
-        <ul>
+        <ul class="wrapper footer_social">
           <li>
             <a href="#" aria-label="Twitter">
-              <span class="visually-hidden">Twitter</span>
+              <span class="visually_hidden">Twitter</span>
 
               <svg width="17" height="15">
                 <use xlink:href="#twitter"></use>
@@ -283,7 +275,7 @@
           </li>
           <li>
             <a href="#" aria-label="facebook">
-              <span class="visually-hidden">facebook</span>
+              <span class="visually_hidden">facebook</span>
 
               <svg width="12" height="22">
                 <use xlink:href="#fb"></use>
@@ -293,7 +285,7 @@
           </li>
           <li>
             <a href="#" aria-label="youtube">
-              <span class="visually-hidden">youtube</span>
+              <span class="visually_hidden">youtube</span>
 
               <svg width="20" height="16">
                 <use xlink:href="#youtube"></use>
@@ -304,7 +296,7 @@
         </ul>
 
       <!-- Блок РАЗРАБОТАНО-->
-      <div>
+      <div class="footer_developed">
         <p>Website by</p>
         <a href="https://htmlacademy.ru">
           <img src="img/footer_htmlacademy.jpg" width="115" height="41" alt="Лого Академии">

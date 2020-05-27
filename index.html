@@ -4,9 +4,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="page_body">
 
     <!-- Блок СПРАЙТОВ -->
     <svg display="none">
@@ -48,16 +50,16 @@
     </svg>
 
       <!-- Меню навигации -->
-      <header>
-        <nav>
+      <header class="main_header">
+        <nav class="main_navigation">
 
           <!-- Логотип по центру-->
-          <a>
+          <a class="main_header_logo">
             <img src="img/header_logo.jpg" width="138" height="70" alt="Логотип СЕДОНЫ">
           </a>
 
           <!-- Блок навигации -->
-          <ul>
+          <ul class="site_navigation">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
@@ -69,12 +71,12 @@
 
       <!--Основная часть сайта -->
       <main>
-          <h1 class="visually-hidden">Проект поиска жилья "СЕДОНА"</h1>
+          <h1 class="visually_hidden">Проект поиска жилья "СЕДОНА"</h1>
 
           <!-- Блок с пригласительным промо -->
-          <section class="intro">
-            <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-            <div>
+          <section class="wrapper">
+            <h2 class="visually_hidden">Добро пожаловать в Седону</h2>
+            <div class="image_wrapper">
               <img src="img/main_intro_background.jpg" width="1200" height="509" alt="Пригласительное фоновое изображение">
               <img src="img/main_intro_logo.jpg" width="457" height="351" alt="Добро пожаловать">
               <img src="img/main_bottom_framing.png" width="1200" height="272" alt="Резаная нижняя грань">
@@ -82,16 +84,16 @@
           </section>
 
       <!-- Блок с преимуществами -->
-      <section>
-        <h2 class="visually-hidden">Преимущества</h2>
+      <section class="features">
+        <h2 class="visually_hidden">Преимущества</h2>
 
-        <div>
+        <div class="feature-item">
           <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
 
-        <div>
-          <div>
+        <div class="wrapper">
+          <div class="feature-item">
             <h3>настоящий городок</h3>
             <span>— №1 —</span>
             <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
@@ -99,7 +101,7 @@
           <img src="img/main_real_town.jpg" width="800" height="256" alt="Настоящий городок">
         </div>
 
-        <ul>
+        <ul class="feature-item">
           <li>
 
             <svg width="75" height="72">
@@ -129,16 +131,16 @@
           </li>
         </ul>
 
-        <div>
+        <div class="wrapper">
           <img src="img/devils_bridge.jpg" width="800" height="256" alt="Мост дьявола">
-          <div>
+          <div class="feature-item">
             <h3>там есть Мост дьявола</h3>
             <span>— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </div>
 
-        <ul>
+        <ul class="feature-item">
           <li>
             <h3>небольшая площадь</h3>
             <span>— №3 —</span>
@@ -158,14 +160,14 @@
       </section>
 
       <!-- Блок с бронированием и картой -->
-      <section>
-        <h2 class="visually-hidden"> Бронирование номеров</h2>
-        <div>
+      <section class="booking">
+        <h2 class="visually_hidden">Бронирование номеров</h2>
+        <div class="wrapper">
           <span>Заинтересовались?</span>
           <p>укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button type="button">Поиск гостиницы в седоне</button>
         </div>
-        <div class="map">
+        <div class="map wrapper">
           <img src="img/main_map.jpg" width="1200" height="594" alt="Карта">
         </div>
       </section>
@@ -175,16 +177,16 @@
     <footer>
 
       <!-- Блок с контактами-->
-      <div>
+      <div class="footer_contacts">
         <span>#visitSEDONA</span>
         <a href="tel:+74956660166" aria-label="Телефон компании">ТЕЛ: +7(495) 666-01-66</a>
       </div>
 
       <!-- Блок с социальными сетями-->
-        <ul>
+        <ul class="wrapper footer_social">
           <li>
             <a href="#" aria-label="Twitter">
-              <span class="visually-hidden">Twitter</span>
+              <span class="visually_hidden">Twitter</span>
 
               <svg width="17" height="15">
                 <use xlink:href="#twitter"></use>
@@ -194,7 +196,7 @@
           </li>
           <li>
             <a href="#" aria-label="facebook">
-              <span class="visually-hidden">facebook</span>
+              <span class="visually_hidden">facebook</span>
 
               <svg width="12" height="22">
                 <use xlink:href="#fb"></use>
@@ -204,7 +206,7 @@
           </li>
           <li>
             <a href="#" aria-label="youtube">
-              <span class="visually-hidden">youtube</span>
+              <span class="visually_hidden">youtube</span>
 
               <svg width="20" height="16">
                 <use xlink:href="#youtube"></use>
@@ -215,9 +217,9 @@
         </ul>
 
       <!-- Блок РАЗРАБОТАНО-->
-      <div>
+      <div class="footer_developed">
         <p>Website by</p>
-        <a>
+        <a href="https://htmlacademy.ru/">
           <img src="img/footer_htmlacademy.jpg" width="115" height="41" alt="Лого Академии">
         </a>
       </div>
@@ -225,8 +227,9 @@
 
     <!-- Попап с поиском гостиниц -->
       <form action="https://echo.htmlacademy.ru" method="post">
-
-        <div>
+      
+      <div class="wrapper">
+        <div class="search">
           <label for="filter_arrival_day">Дата заезда:</label>
           <input type="text" id="filter_arrival_day" name="arrival_day" placeholder="24 апреля 2017">
           <svg width="21" height="22">
@@ -234,29 +237,30 @@
           </svg>
         </div>
 
-        <div>
+        <div class="search">
           <label for="filter_departure_day">Дата выезда:</label>
           <input type="text" id="filter_departure_day" name="departure_day" placeholder="4 июля 2017">
           <svg width="21" height="22">
             <use xlink:href="#calendar"></use>
           </svg>
         </div>
-
-        <div>
+      </div>
+      <div class="wrapper">
+        <div class="number_of_people"> 
           <label for="filter_adults">Взрослые:</label>
           <button type="button" aria-label="Уменьшить количество взрослых">-</button>
           <input type="text" id="filter_adults" name="adults" placeholder="2">
           <button type="button" aria-label="Увеличить количество взрослых">+</button>
         </div>
 
-        <div>
+        <div class="number_of_people">
           <label for="filter_children">Дети:</label>
           <button type="button" aria-label="Уменьшить количество детей">-</button>
           <input type="text" id="filter_children" name="children" placeholder="0">
           <button type="button" aria-label="Увеличить количество детей">+</button>
         </div>
-
-        <button type="submit">Найти</button>
+        <button class="find" type="submit">Найти</button>
+      </div>
       </form>
 
   </body>
