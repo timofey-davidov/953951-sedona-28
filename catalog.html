@@ -64,21 +64,20 @@
     </svg>
     
       <!-- Меню навигации -->
-      <header class="main_header">
-        <nav class="main_navigation">
+      <header class="header">
+        <nav class="navigation">
 
           <!-- Логотип по центру-->
-          <a href="#" class="main_header_logo">
+          <a href="#" class="navigation__logo">
             <img src="img/logo.png" width="138" height="70" alt="Логотип СЕДОНЫ">
           </a>
 
           <!-- Блок навигации -->
-          <ul class="site_navigation">
+          <ul class="navigation__link">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
-            <li></li>
             <li><a href="#">Карта штата</a></li>
-            <li><a>Гостиницы</a></li>
+            <li><a class="active" href="catalog.html">Гостиницы</a></li>
           </ul>
 
         </nav>
@@ -91,13 +90,13 @@
       <!-- Блок фильтров с поиском жилья -->
       <section class="filters">
         <h2 class="visually_hidden">Фильтры подбора жилья</h2>
-        <form class="house_filter" action="https://echo.htmlacademy.ru" method="get">
+        <form class="filters__house" action="https://echo.htmlacademy.ru" method="get">
 
-          <fieldset class="filter_item">
+          <fieldset class="infrastructure">
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input type="checkbox" value="infrastructure" name="pool" id="filter_pool">
+                <input type="checkbox" value="infrastructure" name="pool" id="filter_pool" checked>
                 <label for="filter_pool">Бассейн</label>
               </li>
               <li>
@@ -111,7 +110,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="filter_item">
+          <fieldset class="type-of-living">
             <legend>Тип жилья:</legend>
             <ul>
               <li>
@@ -130,51 +129,54 @@
           </fieldset>
 
           <!-- Блок с фильтром стоимости и ползунками -->
-          <div>
+          <div class="main_filter">
 
-            <fieldset class="filter_item">
-              <p>Стоимость в сутки (Р):</p>
-              <ul class="price">
-                <li>
-                  <label>от<input type="text" name="price_min" placeholder="0"></label>
-                </li>
-                <li>
-                  <label>до<input type="text" name="price_max" placeholder="3000"></label>
-                </li>
-              </ul>
-            </fieldset>
-
-            <!-- DIV с двойным ползунком -->
-            <div>
-              <div class="main_scale"></div>
-              <div class="main_scale_between"></div>
-              <div class="main_slider"></div>
-              <div class="main_slider"></div>
-            </div>
+            <form method="get" action="https://echo.htmlacademy.ru">
+              <fieldset class="filter__item">
+                <legend>Стоимость в сутки (Р):</legend>
+                <div class="range-filter">
+                  <div class="price-controls">
+                    <label class="min-price">
+                      от <input type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price">
+                      до <input type="number" name="max-price" value="3000">
+                    </label>
+                  </div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>     
+            <button type="submit">Показать</button>       
           </div>
-          <button type="submit">Показать</button>
         </form>
       </section>
 
       <!-- Блок со списком гостиинц-->
-      <section>
+      <section class="hotels">
         <h2 class="visually_hidden">Предложения</h2>
 
-        <div class="filter_of_house">
-          <span class="found">Найдено: 3</span>
+        <div class="filter-type">
+          <span class="filter-type__found">Найдено: 3</span>
           <h3>Сортировка:</h3>
-          <div class="filters_house">
-              <button type="button active">По цене</button>
+          <div class="filter-type__buttons">
+              <button type="button" class="active">По цене</button>
               <button type="button">По типу</button>
               <button type="button">по рейтингу</button>
           </div>
-          <div class="arrows">
+          <div class="filter-type__arrows">
               <button type="button" aria-label="Стрелка вниз">
                 <svg width="11" height="10">
                   <use xlink:href="#up"></use>
                 </svg>
               </button>
-              <button type="button" aria-label="Стрелка вверх">
+              <button type="button" class="active" aria-label="Стрелка вверх">
                 <svg width="11" height="10">
                   <use xlink:href="#down"></use>
                 </svg>
@@ -182,18 +184,18 @@
           </div>
         </div>
 
-        <ul class="hotels">
+        <ul class="result-hotels">
           <li>
             <img src="img/main_amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <div class="hotel_item">
+            <div class="result-hotels__item">
               <a>Amara Resort & Spa</a>
               <span>Гостиница</span>
               <span>От 4000 Р.</span>
-              <a href="#">Подробнее</a>
-              <a href="#">Забронировать</a>
+              <a class="button more" href="#">Подробнее</a>
+              <a class="button book" href="#">Забронировать</a>
             </div>
-            <div>
-              <ul class="star-rating">
+            <div class="result-hotels__star-rating">
+              <ul>
                 <li>
                   <svg width="19" height="17">
                     <use xlink:href="#star"></use>
@@ -220,15 +222,15 @@
           </li>
           <li>
             <img src="img/main_desert.jpg" width="135" height="90" alt="Desert Quail Inn">
-            <div class="hotel_item">
+            <div class="result-hotels__item">
               <a>Desert Quail Inn</a>
               <span>Мотель</span>
               <span>От 3000 Р.</span>
-              <a href="#">Подробнее</a>
-              <a href="#">Забронировать</a>
+              <a class="button more" href="#">Подробнее</a>
+              <a class="button book" href="#">Забронировать</a>
             </div>
-            <div>
-              <ul class="star-rating">
+            <div class="result-hotels__star-rating">
+              <ul>
                 <li>
                   <svg width="19" height="17">
                     <use xlink:href="#star"></use>
@@ -250,15 +252,15 @@
           </li>
           <li>
             <img src="img/main_villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-            <div class="hotel_item">
+            <div class="result-hotels__item">
               <a>Villas at Poco Diablo</a>
               <span>Апартаменты</span>
               <span>От 2000 Р.</span>
-              <a href="#">Подробнее</a>
-              <a href="#">Забронировать</a>
+              <a class="button more" href="#">Подробнее</a>
+              <a class="button book" href="#">Забронировать</a>
             </div>
-            <div>
-              <ul class="star-rating">
+            <div class="result-hotels__star-rating">
+              <ul>
                 <li>
                   <svg width="19" height="17">
                     <use xlink:href="#star"></use>
@@ -279,18 +281,18 @@
     </main>
 
     <!-- Подвал сайта -->
-    <footer>
+    <footer class="footer footer-main_page">
 
       <!-- Блок с контактами-->
-      <div class="footer_contacts">
+      <div class="footer__contacts">
         <span class="hashtag">#visitSEDONA</span>
         <a href="tel:+74956660166" aria-label="Телефон компании">ТЕЛ: +7(495) 666-01-66</a>
       </div>
 
       <!-- Блок с социальными сетями-->
-        <ul class="footer_social">
+        <ul class="footer__social">
           <li>
-            <a class="footer_button" href="#" aria-label="Twitter">
+            <a class="button" href="#" aria-label="Twitter">
               <span class="visually_hidden">Twitter</span>
 
               <svg class="twitter" width="17" height="15">
@@ -300,7 +302,7 @@
             </a>
           </li>
           <li>
-            <a class="footer_button" href="#" aria-label="facebook">
+            <a class="button" href="#" aria-label="facebook">
               <span class="visually_hidden">facebook</span>
 
               <svg class="fb" width="12" height="22">
@@ -310,7 +312,7 @@
             </a>
           </li>
           <li>
-            <a class="footer_button" href="#" aria-label="youtube">
+            <a class="button" href="#" aria-label="youtube">
               <span class="visually_hidden">youtube</span>
 
               <svg class="youtube" width="20" height="16">
@@ -322,9 +324,9 @@
         </ul>
 
       <!-- Блок РАЗРАБОТАНО-->
-      <div class="footer_developed">
+      <div class="footer__developed">
         <p>Website by</p>
-        <a class="footer_developed_button" href="https://htmlacademy.ru/">
+        <a class="button" href="https://htmlacademy.ru/">
           
           <svg class="htmlacademy" width="115" height="41">
             <use xlink:href="#htmlacademy"></use>

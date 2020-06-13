@@ -54,19 +54,18 @@
     </svg>
 
       <!-- Меню навигации -->
-      <header class="main_header">
-        <nav class="main_navigation">
+      <header class="header">
+        <nav class="navigation">
 
           <!-- Логотип по центру-->
-          <a href="#" class="main_header_logo">
+          <a href="#" class="navigation__logo">
             <img src="img/logo.png" width="138" height="70" alt="Логотип СЕДОНЫ">
           </a>
 
           <!-- Блок навигации -->
-          <ul class="site_navigation">
+          <ul class="navigation__link">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
-            <li></li>
             <li><a href="#">Карта штата</a></li>
             <li><a href="catalog.html">Гостиницы</a></li>
           </ul>
@@ -74,14 +73,14 @@
         </nav>
       </header>
 
-      <!--Основная часть сайта -->
+      <!-- Основная часть сайта -->
       <main>
           <h1 class="visually_hidden">Проект поиска жилья "СЕДОНА"</h1>
 
           <!-- Блок с пригласительным промо -->
-          <section class="welcome wrapper">
+          <section class="welcome-img">
             <h2 class="visually_hidden">Добро пожаловать в Седону</h2>
-            <div class="image_wrapper">
+            <div class="welcome-img__img">
               <img src="img/main_intro_background.jpg" width="1200" height="509" alt="Пригласительное фоновое изображение">
               <img src="img/welcome.png" width="457" height="351" alt="Добро пожаловать">
               <img src="img/main_bottom_framing.png" width="1200" height="272" alt="Обрезка">
@@ -92,21 +91,19 @@
       <section class="features">
         <h2 class="visually_hidden">Преимущества</h2>
 
-        <div class="invitation_intro feature-item">
-          <h3>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h3>
+        <div class="features__intro">
+          <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
 
-        <div class="main_feature wrapper">
-          <div class="feature-item">
-            <h3>настоящий<br> городок</h3>
-            <span class="number">— №1 —</span>
-            <p>Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
-          </div>
+        <div class="features__main">
+          <h3>настоящий городок</h3>
+          <span>— №1 —</span>
+          <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
           <img src="img/main_real_town.jpg" width="800" height="256" alt="Настоящий городок">
         </div>
 
-        <ul class="advantages feature-item">
+        <ul class="features__secondary">
           <li>
 
             <svg width="75" height="72">
@@ -136,16 +133,14 @@
           </li>
         </ul>
 
-        <div class="main_feature wrapper">
+        <div class="features__main">
           <img src="img/devils_bridge.jpg" width="800" height="256" alt="Мост дьявола">
-          <div class="feature-item">
-            <h3>там есть Мост дьявола</h3>
-            <span class="number">— №2 —</span>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          </div>
+          <h3>там есть Мост дьявола</h3>
+          <span>— №2 —</span>
+          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
 
-        <ul class="last_feature feature-item">
+        <ul class="features__last">
           <li>
             <h3>небольшая<br> площадь</h3>
             <span>— №3 —</span>
@@ -167,30 +162,28 @@
       <!-- Блок с бронированием и картой -->
       <section class="booking">
         <h2 class="visually_hidden">Бронирование номеров</h2>
-        <div class="wrapper">
-          <span class="attention">Заинтересовались?</span>
-          <p>укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <button type="button">Поиск гостиницы в седоне</button>
-        </div>
-        <div class="map wrapper">
-          <img src="img/main_map.jpg" width="1200" height="594" alt="Карта">
+        <span class="booking__attention">Заинтересовались?</span>
+        <p>укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <button type="button" class="booking__hotel">Поиск гостиницы в седоне</button>
+        <div class="booking__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63211.53185005776!2d-111.75850793447248!3d34.843211344325674!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1591821055103!5m2!1sru!2sru" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
       </section>
     </main>
 
     <!-- Подвал сайта -->
-    <footer>
+    <footer class="footer footer-main_page">
 
       <!-- Блок с контактами-->
-      <div class="footer_contacts">
+      <div class="footer__contacts">
         <span class="hashtag">#visitSEDONA</span>
         <a href="tel:+74956660166" aria-label="Телефон компании">ТЕЛ: +7(495) 666-01-66</a>
       </div>
 
       <!-- Блок с социальными сетями-->
-        <ul class="footer_social">
+        <ul class="footer__social">
           <li>
-            <a class="footer_button" href="#" aria-label="Twitter">
+            <a class="button" href="#" aria-label="Twitter">
               <span class="visually_hidden">Twitter</span>
 
               <svg class="twitter" width="17" height="15">
@@ -200,7 +193,7 @@
             </a>
           </li>
           <li>
-            <a class="footer_button" href="#" aria-label="facebook">
+            <a class="button" href="#" aria-label="facebook">
               <span class="visually_hidden">facebook</span>
 
               <svg class="fb" width="12" height="22">
@@ -210,7 +203,7 @@
             </a>
           </li>
           <li>
-            <a class="footer_button" href="#" aria-label="youtube">
+            <a class="button" href="#" aria-label="youtube">
               <span class="visually_hidden">youtube</span>
 
               <svg class="youtube" width="20" height="16">
@@ -222,9 +215,9 @@
         </ul>
 
       <!-- Блок РАЗРАБОТАНО-->
-      <div class="footer_developed">
+      <div class="footer__developed">
         <p>Website by</p>
-        <a class="footer_developed_button" href="https://htmlacademy.ru/">
+        <a class="button" href="https://htmlacademy.ru/">
           
           <svg class="htmlacademy" width="115" height="41">
             <use xlink:href="#htmlacademy"></use>
@@ -235,42 +228,46 @@
     </footer>
 
     <!-- Попап с поиском гостиниц -->
-      <form class="popup" action="https://echo.htmlacademy.ru" method="post">
-      
-      <div class="date wrapper">
-        <div class="search">
+      <form class="popup popup-closed" action="https://echo.htmlacademy.ru" method="post">
+      <div class="wrapper">
+      <div class="popup__date">
           <label for="filter_arrival_day">Дата заезда:</label>
           <input type="text" id="filter_arrival_day" name="arrival_day" placeholder="24 апреля 2017">
           <svg width="21" height="22">
             <use xlink:href="#calendar"></use>
           </svg>
-        </div>
+      </div>
 
-        <div class="search">
+        <div class="popup__search">
           <label for="filter_departure_day">Дата выезда:</label>
           <input type="text" id="filter_departure_day" name="departure_day" placeholder="4 июля 2017">
           <svg width="21" height="22">
             <use xlink:href="#calendar"></use>
           </svg>
         </div>
-      </div>
-      <div class="wrapper">
-        <div class="number_of_people"> 
+        <div class="popup__number_of_people_1"> 
           <label for="filter_adults">Взрослые:</label>
-          <button type="button" aria-label="Уменьшить количество взрослых">-</button>
+          <button type="button" aria-label="Уменьшить количество взрослых">—</button>
           <input type="text" id="filter_adults" name="adults" placeholder="2">
           <button type="button" aria-label="Увеличить количество взрослых">+</button>
         </div>
-
-        <div class="number_of_people">
+        <div class="popup__number_of_people_2">
           <label for="filter_children">Дети:</label>
-          <button type="button" aria-label="Уменьшить количество детей">-</button>
+          <button type="button" aria-label="Уменьшить количество детей">—</button>
           <input type="text" id="filter_children" name="children" placeholder="0">
           <button type="button" aria-label="Увеличить количество детей">+</button>
         </div>
         <button class="find" type="submit">Найти</button>
-      </div>
       </form>
 
+      <script>
+        let popup = document.querySelector('.popup');
+
+        let findButton = document.querySelector('.booking button');
+        findButton.onclick = function () {
+        popup.classList.toggle('popup-closed');
+        popup.classList.toggle('popup-opened'); 
+  };
+      </script>
   </body>
 </html>
