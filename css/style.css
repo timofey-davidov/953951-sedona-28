@@ -451,6 +451,7 @@ padding-bottom: 44px;
 
 .booking__hotel {
 display: inline-block;
+vertical-align: bottom;
 background-color: var(--color-type-2);
 color: var(--text-color-2);
 width: 568px;
