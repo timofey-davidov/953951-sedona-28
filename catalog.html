@@ -81,7 +81,7 @@
         <nav class="navigation">
 
           <!-- Логотип по центру-->
-          <a href="index.html" class="navigation__logo">
+          <a href="index.html" class="navigation__logo" aria-label="переход на главную страницу">
             <svg width="138" height="70">
               <use xlink:href="#header_logo"></use>
             </svg>
@@ -111,15 +111,15 @@
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input type="checkbox" value="infrastructure" name="pool" id="filter_pool" checked>
+                <input class="filter_checkbox" type="checkbox" value="infrastructure" name="pool" id="filter_pool" checked>
                 <label for="filter_pool">Бассейн</label>
               </li>
               <li>
-                <input type="checkbox" value="infrastructure" name="parking" id="filter_parking">
+                <input class="filter_checkbox" type="checkbox" value="infrastructure" name="parking" id="filter_parking">
                 <label for="filter_parking">Парковка</label>
               </li>
               <li>
-                <input type="checkbox" value="infrastructure" name="wi-fi" id="filter_wi-fi">
+                <input class="filter_checkbox" type="checkbox" value="infrastructure" name="wi-fi" id="filter_wi-fi">
                 <label for="filter_wi-fi">Wi-Fi</label>
               </li>
             </ul>
@@ -129,15 +129,15 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <input type="checkbox" value="type_of_house" name="hotel" id="filter_hotel" checked>
+                <input class="filter_checkbox" type="checkbox" value="type_of_house" name="hotel" id="filter_hotel" checked>
                 <label for="filter_hotel">Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" value="type_of_house" name="motel" id="filter_motel" checked>
+                <input class="filter_checkbox" type="checkbox" value="type_of_house" name="motel" id="filter_motel" checked>
                 <label for="filter_motel">Мотель</label>
               </li>
               <li>
-                <input type="checkbox" value="type_of_house" name="apartments" id="filter_apartments" checked>
+                <input class="filter_checkbox" type="checkbox" value="type_of_house" name="apartments" id="filter_apartments" checked>
                 <label for="filter_apartments">Апартаменты</label>
               </li>
             </ul>
@@ -146,16 +146,16 @@
           <!-- Блок с фильтром стоимости и ползунками -->
           <div class="main_filter">
 
-            <form method="get" action="https://echo.htmlacademy.ru">
+            
               <fieldset class="filter__item">
                 <legend>Стоимость в сутки (Р):</legend>
                 <div class="range-filter">
                   <div class="price-controls">
                     <label class="min-price">
-                     <span>от</span><input type="number" name="min-price" placeholder="0">
+                      <input type="number" name="min-price" placeholder="от 0">
                     </label>
                     <label class="max-price">
-                      <span>до</span><input type="number" name="max-price" placeholder="3000">
+                      <input type="number" name="max-price" placeholder=" до 3000">
                     </label>
                   </div>
                   <div class="range-controls">
@@ -167,8 +167,7 @@
                   </div>
                 </div>
               </fieldset>
-            </form>     
-            <button type="submit">Показать</button>       
+            <button class="show" type="submit">Показать</button>       
           </div>
         </form>
       </section>
@@ -203,7 +202,7 @@
           <li>
             <img src="img/main_amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
             <div class="result-hotels__item">
-              <a>Amara Resort & Spa</a>
+              <a href="#">Amara Resort & Spa</a>
               <div class="info">
                 <div class="column">
                   <span>Гостиница</span>
@@ -216,7 +215,7 @@
               </div> 
             </div>
             <div class="result-hotels__star-rating">
-              <ul>
+              <ul class="item">
                 <li>
                   <svg width="19" height="17">
                     <use xlink:href="#star"></use>
@@ -244,7 +243,7 @@
           <li>
             <img src="img/main_desert.jpg" width="135" height="90" alt="Desert Quail Inn">
             <div class="result-hotels__item">
-              <a>Desert Quail Inn</a>
+              <a href="#">Desert Quail Inn</a>
               <div class="info">
                 <div class="column">
                   <span>Мотель</span>
@@ -280,7 +279,7 @@
           <li>
             <img src="img/main_villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             <div class="result-hotels__item">
-              <a>Villas at Poco Diablo</a>
+              <a href="#">Villas at Poco Diablo</a>
               <div class="info">
               <div class="column">
                 <span>Апартаменты</span>

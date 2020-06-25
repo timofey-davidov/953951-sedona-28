@@ -80,7 +80,7 @@
         <nav class="navigation">
 
           <!-- Логотип по центру-->
-          <a class="navigation__logo">
+          <a class="navigation__logo" aria-label="переход на главную страницу">
             <svg width="138" height="70">
               <use xlink:href="#header_logo"></use>
             </svg>
@@ -196,47 +196,53 @@
         <h2 class="visually_hidden">Бронирование номеров</h2>
         <span class="booking__attention">Заинтересовались?</span>
         <p>укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
-        <button type="button" class="booking__hotel">Поиск гостиницы в седоне</button>
+
+        <!-- Попап с поиском гостиниц -->
+        <div class="search-block">
+          <button type="button" class="booking__hotel">Поиск гостиницы в седоне</button>
+          <div class="popup-wrapper popup-wrapper--active">
+          <form class="popup" action="https://echo.htmlacademy.ru" method="post" aria-label="Открыть фильтр подбора гостиниц">
+            <div class="wrapper">
+            <div class="popup__date">
+                <label for="filter_arrival_day">Дата заезда:</label>
+                <input type="text" id="filter_arrival_day" name="arrival_day" class="arival_day" placeholder="24 апреля 2017">
+                <svg width="21" height="22">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+            </div>
+      
+              <div class="popup__search">
+                <label for="filter_departure_day">Дата выезда:</label>
+                <input type="text" id="filter_departure_day" name="departure_day" class="departure_day" placeholder="4 июля 2017">
+                <svg width="21" height="22">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </div>
+              <div class="popup__number_of_people"> 
+                <div class="people-container">
+                  <label for="filter_adults">Взрослые:</label>
+                  <button type="button" aria-label="Уменьшить количество взрослых">—</button>
+                  <input type="text" id="filter_adults" name="adults" placeholder="2">
+                  <button type="button" aria-label="Увеличить количество взрослых">+</button>
+                </div>
+                <div class="people-container">
+                  <label for="filter_children">Дети:</label>
+                  <button type="button" aria-label="Уменьшить количество детей">—</button>
+                  <input type="text" id="filter_children" name="children" placeholder="0">
+                  <button type="button" aria-label="Увеличить количество детей">+</button>
+                </div>
+              </div>
+              <button class="find" type="submit">Найти</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
         <div class="booking__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313688.322493029!2d-111.39203380755957!3d34.92505535611076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1592499987449!5m2!1sru!2sru" width="1200" height="595" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
       </section>
 
-          <!-- Попап с поиском гостиниц -->
-      <form class="popup popup-closed" action="https://echo.htmlacademy.ru" method="post" aria-label="Открыть фильтр подбора гостиниц">
-      <div class="wrapper">
-      <div class="popup__date">
-          <label for="filter_arrival_day">Дата заезда:</label>
-          <input type="text" id="filter_arrival_day" name="arrival_day" class="arival_day" placeholder="24 апреля 2017">
-          <svg width="21" height="22">
-            <use xlink:href="#calendar"></use>
-          </svg>
-      </div>
-
-        <div class="popup__search">
-          <label for="filter_departure_day">Дата выезда:</label>
-          <input type="text" id="filter_departure_day" name="departure_day" class="departure_day" placeholder="4 июля 2017">
-          <svg width="21" height="22">
-            <use xlink:href="#calendar"></use>
-          </svg>
-        </div>
-        <div class="popup__number_of_people"> 
-          <div class="people-container">
-            <label for="filter_people">Взрослые:</label>
-            <button type="button" aria-label="Уменьшить количество взрослых">—</button>
-            <input type="text" id="filter_adults" name="adults" placeholder="2">
-            <button type="button" aria-label="Увеличить количество взрослых">+</button>
-          </div>
-          <div class="people-container">
-            <label for="filter_people">Дети:</label>
-            <button type="button" aria-label="Уменьшить количество детей">—</button>
-            <input type="text" id="filter_children" name="children" placeholder="0">
-            <button type="button" aria-label="Увеличить количество детей">+</button>
-          </div>
-        </div>
-        <button class="find" type="submit">Найти</button>
-        </div>
-      </form>
     </main>
 
     <!-- Подвал сайта -->
