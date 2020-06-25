@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="page_body">
@@ -206,17 +206,21 @@
             <div class="popup__date">
                 <label for="filter_arrival_day">Дата заезда:</label>
                 <input type="text" id="filter_arrival_day" name="arrival_day" class="arival_day" placeholder="24 апреля 2017">
-                <svg width="21" height="22">
-                  <use xlink:href="#calendar"></use>
-                </svg>
+                <button type="button" aria-label="Открыть календарь">
+                  <svg width="21" height="22">
+                    <use xlink:href="#calendar"></use>
+                  </svg>
+                </button>
             </div>
       
               <div class="popup__search">
                 <label for="filter_departure_day">Дата выезда:</label>
                 <input type="text" id="filter_departure_day" name="departure_day" class="departure_day" placeholder="4 июля 2017">
-                <svg width="21" height="22">
-                  <use xlink:href="#calendar"></use>
-                </svg>
+                <button type="button" aria-label="Открыть календарь">
+                  <svg width="21" height="22">
+                    <use xlink:href="#calendar"></use>
+                  </svg>
+                </button>
               </div>
               <div class="popup__number_of_people"> 
                 <div class="people-container">
@@ -301,7 +305,7 @@
       </div>
     </footer>
 
-    <script src="js/search.js"></script>
+    <script src="js/search.min.js"></script>
 
   </body>
 </html>
